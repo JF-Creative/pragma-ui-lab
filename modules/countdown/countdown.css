@@ -1,0 +1,22 @@
+.timer {
+    width: 100%;
+    display: flex;
+}
+
+.bloqTime {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bloqTime h1 {
+    font-size: xx-large;
+}
+
+.bloqTime h2 {
+    font-size: larger;
+    position: relative;
+    top:-20%;
+}
