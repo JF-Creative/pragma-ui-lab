@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./countdown.css";
+import "./countdownStyles.css";
 
-import { countdownTimer } from "./countdown"
+import { countdownTimer } from "./countdownTimer"
 export default function Countdown({ deadTime = "2027-01-01T00:00:00" }) {
   //STATE
   const [data, setData] = useState(countdownTimer(deadTime));
