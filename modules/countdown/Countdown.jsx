@@ -19,11 +19,10 @@ export default function Countdown({ deadTime = "2027-01-01T00:00:00" }) {
     <div className="timer">
       {Object.entries(data).map(([key, value]) => (
         <div key={key} className="bloqTime">
-          <h1>{value}</h1>
-          <h2>{key}</h2>
+          <span>{value}</span>
+          <span>{key}</span>
         </div>
       ))}
-
     </div>
   );
 }
