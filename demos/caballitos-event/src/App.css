@@ -32,6 +32,7 @@
   height: 70%;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   gap: 1rem;
 }
@@ -46,7 +47,10 @@
   justify-content: center;
   padding-right: 5px;
   border-right: solid 1px black;
+  grid-row: 1/3;
 }
+
+/*AJUSTES COUNTDOWN*/
 
 .timerContainer {
   width: 100%;
@@ -54,7 +58,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-column: 2;
+  grid-row: 1/3;
 }
+
+.bloqTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/*SPONSORS*/
 
 .patreon {
   width: 100%;
@@ -62,17 +78,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  grid-column: 3;
+  grid-row: 1/3;
 }
 
 .patreon p {
   margin: 0;
   margin-bottom: 10px;
   font-size: 100%;
+  font-weight: 700;
 }
-/* 
-.sponsors-container {
-  height: 80px;
-} */
 
 .sponsor-rotator img {
   max-width: 120%;
@@ -80,9 +95,11 @@
   object-fit: contain;
 }
 
+/*SECCION EMISORAS RCN RADIO IBAGUE*/
+
 .p2 {
   height: 10%;
-  font-size: 60%;
+  font-size: 0.6em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,23 +111,68 @@
   font-weight: 600;
 }
 
-/*AJUSTES COUNTDOWN*/
-
-.bloqTime {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .bloqTime p {
-    font-size: 20px;
-} */
 
 
 @media (max-width:500px) {
   .module {
     width: 300px;
     height: 150px;
+  }
+
+  .p1 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 6px;
+  }
+
+  /*LOGO CABALLITOS DE PALO*/
+
+  .logo {
+    grid-column: 1;
+    grid-row: 1/3;
+    border-right: none;
+    height: 45px;
+    padding-right: 4px;
+  }
+
+  /*AJUSTES COUNTDOWN*/
+
+  .timerContainer {
+    grid-column: 2;
+    grid-row: 1;
+    height: auto;
+    font-size: 0.55em;
+  }
+
+  /*SPONSORS*/
+
+  .patreon {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .patreon p {
+    font-size: 0.75em;
+    margin-bottom: 5px;
+  }
+
+  .sponsor-rotator img {
+    max-width: 90%;
+    max-height: 40px;
+  }
+
+  /*SECCION EMISORAS RCN RADIO IBAGUE*/
+
+  .p2 {
+    height: 12%;
+    font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .p2 img {
+    height: 22px;
   }
 }
